@@ -1,0 +1,14 @@
+﻿@page "/"
+
+<EditForm Model="Model">
+    <label >Email</label>
+    <InputText @bind-Value="Model.Email" />
+</EditForm>
+
+@code {
+    public class InputModel
+    {
+        public string Email { get; set; } = default!;
+    }
+    public InputModel Model { get; set; } = new();
+}
